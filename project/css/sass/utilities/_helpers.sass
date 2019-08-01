@@ -1,0 +1,125 @@
+$colorList: ($blueColor: blue, $greenColor: green, $navyColor: navy, $redColor: red, $orangeColor: orange)
+@each $color, $name in $colorList
+  .text-#{$name}
+    color: $color
+  .bg-#{$name}
+    background-color: $color
+  .btn.bg-#{$name}:hover
+    background-color: transparent
+    color: $color !important
+
+@each $prefix, $size in (null: null, sm-: 576px, md-: 768px, lg-: 992px, xl-: 1200px)
+  @if $prefix == null
+    @for $i from 1 through 12
+      .col-#{$prefix}#{$i}
+        flex: 0 0 percentage($i / 12)
+        max-width: percentage($i / 12)
+    .#{$prefix}flex
+      display: flex
+    .#{$prefix}block
+      display: block
+    .#{$prefix}inline-block
+      display: inline-block
+  @else
+    @media (min-width: $size)
+      @for $i from 1 through 12
+        .col-#{$prefix}#{$i}
+          flex: 0 0 percentage($i / 12)
+          max-width: percentage($i / 12)
+      .#{$prefix}flex
+        display: flex
+      .#{$prefix}block
+        display: block
+      .#{$prefix}inline-block
+        display: inline-block
+
+.flex-equal
+  flex: 1
+
+.flex-wrap
+  flex-wrap: wrap
+
+.align-items-start
+  align-items: flex-start
+
+.align-items-center
+  align-items: center
+
+.justify-content-between
+  justify-content: space-between
+
+.justify-content-center
+  justify-content: center
+
+.justify-content-around
+  justify-content: space-around
+
+.text-left
+  text-align: $textLeft
+
+.text-right
+  text-align: $textRight
+
+.text-center
+  text-align: center
+
+.relative
+  position: relative
+
+.absolute
+  position: absolute
+
+.fixed
+  position: fixed
+
+.middle
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+.middle-x
+  left: 50%
+  transform: translateX(-50%)
+
+.middle-y
+  top: 50%
+  transform: translateY(-50%)
+
+.m-auto
+  margin: auto
+
+.my-0
+  margin-top: 0
+  margin-bottom: 0
+
+.mt-0
+  margin-top: 0
+
+.mb-0
+  margin-bottom: 0
+
+.row
+  margin-right: -15px
+  margin-left: -15px
+
+.col
+  padding-right: 15px
+  padding-left: 15px
+
+.overlay
+  background-color: rgba(0,0,0,0.3)
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+
+%dots
+  display: inline-block
+  margin: 0 8px
+  width: 10px
+  height: 10px
+  background-color: #fff
+  border-radius: 50%
+  &.active
+    background-color: $blueColor

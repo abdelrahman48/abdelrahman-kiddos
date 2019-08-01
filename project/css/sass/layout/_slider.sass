@@ -1,0 +1,23 @@
+.header-slider
+  overflow: hidden
+  .slider-container
+    transition: $transition
+    transform: translateX(0px)
+    .text
+      width: 100%
+      padding: 0 15px
+      h1
+        color: #fff
+        font-size: 60px
+        @include maxMedium
+          font-size: 40px
+      .btn
+        @include btn(#fff, $orangeColor, 20px, 132px, 30px)
+    .image
+      height: 600px
+      background: no-repeat center
+      background-size: cover
+  .slider-dots
+    bottom: 80px
+    span
+      @extend %dots

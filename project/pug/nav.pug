@@ -1,0 +1,20 @@
+include mixins
+nav
+    .container.relative.lg-flex
+        .menu.absolute MENU
+        .text-left
+            a(href="#" class="logo") Kiddos
+        .navigation
+            -
+                var arr = [
+                {name:'Home',class:'active'},
+                {name:'About'},
+                {name:'Teacher'},
+                {name:'Courses'},
+                {name:'Pricing'},
+                {name:'Blog'},
+                {name:'Contact'}
+                ]
+            ul.lg-flex
+                each nav in arr
+                    li(class=nav.class).flex-equal: a(href=nav.name.toLowerCase() + '.html') #{nav.name}

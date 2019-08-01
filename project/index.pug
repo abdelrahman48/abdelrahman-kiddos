@@ -1,0 +1,503 @@
+- var title = "Home"
+include pug/mixins
+doctype
+html(lang="en")
+    include pug/head
+    body
+        //- span.window-size.fixed 0
+        include pug/contact
+        include pug/nav
+
+        // Start Slider
+        section.header-slider.relative
+            .slider-container.flex
+                -
+                    var arr = [
+                    {class: 'active', img: 'slider-1', text1: 'Kids Are The Best',
+                    text2:'Explorers In The World'},
+
+                    {img: 'slider-2', text1: 'Perfect Learned',
+                    text2:'For Your Child'}
+                    ]
+                each slider in arr
+                    .slider.col-12.relative(class=slider.class)
+                        .overlay
+                        .text.absolute.middle.text-center
+                            h1.mt-0 #{slider.text1} #[br] #{slider.text2}
+                            a(href="#" class="btn") Read more
+                        .image(style='background-image: url("img/' + slider.img + '.jpg")')
+
+            .slider-dots.absolute.middle-x
+                -
+                    var arr = [
+                    {class: 'dot active'}, {class: 'dot'},
+                    ]
+                each dot in arr
+                    span(class=dot.class)
+
+
+        // End Slider
+
+        // Start Features
+
+        section.features.md-flex.flex-wrap
+            -
+                var arr = [
+                    {
+                    icon:'flaticon-woman',
+                    title:'Certified Teachers',
+                    text:'Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.',
+                    bgColor: 'bg-blue'
+                    },
+                    {
+                    icon:'flaticon-reading',
+                    title:'Special Education',
+                    text:'Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.',
+                    bgColor: 'bg-green'
+                    },
+                    {
+                    icon:'flaticon-study',
+                    title:'Book & Library',
+                    text:'Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.',
+                    bgColor: 'bg-navy'
+                    },
+                    {
+                    icon:'flaticon-diploma',
+                    title:'Certification',
+                    text:'Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.',
+                    bgColor: 'bg-red'
+                    }
+                ]
+
+            each feature in arr
+                .col-lg-3.col-md-6
+                    .feature.relative.text-center(class=feature.bgColor)
+                        .icon.absolute.middle-x
+                            i(class=feature.icon)
+                        h3.title #{feature.title}
+                        p.text #{feature.text}
+
+        // End Features
+
+        // Start Offers
+
+        section.offers
+            .container.md-flex
+
+                .welcomeToKiddos.col-lg-5.col-md-6
+                    h2.title Welcome to Kiddos Learning School
+                    p.text On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word.
+                    p.text Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. And if she hasn’t been rewritten, then they are still using her.
+
+                    a(href="#" class="btn") Read more
+
+                .whatWeOffer.col-lg-7.col-md-6
+                    h2.title What We Offer
+                    p.text On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word.
+
+                    .services.flex.flex-wrap.row
+                        -
+                            var arr = [
+                            {
+                            icon:'flaticon-security',
+                            title:'Safety First',
+                            text:'Far far away, behind the word mountains, far from the countries Vokalia.'
+                            },
+                            {
+                            icon:'flaticon-reading',
+                            title:'Regular Classes',
+                            text:'Far far away, behind the word mountains, far from the countries Vokalia.'
+                            },
+                            {
+                            icon:'flaticon-diploma',
+                            title:'Certified Teachers',
+                            text:'Far far away, behind the word mountains, far from the countries Vokalia.'
+                            },
+                            {
+                            icon:'flaticon-school',
+                            title:'Sufficient Classrooms',
+                            text:'Far far away, behind the word mountains, far from the countries Vokalia.'
+                            },
+                            {
+                            icon:'flaticon-jigsaw',
+                            title:'Creative Lessons',
+                            text:'Far far away, behind the word mountains, far from the countries Vokalia.'
+                            },
+                            {
+                            icon:'flaticon-soccer',
+                            title:'Sports Facilities',
+                            text:'Far far away, behind the word mountains, far from the countries Vokalia.'
+                            },
+                            ]
+
+                        each service in arr
+                            .service.col.col-lg-6
+                                .flex
+                                    .icon.relative
+                                        i.absolute.middle(class=service.icon)
+                                    .desc
+                                        h3.title #{service.title}
+                                        p.text #{service.text}
+
+
+        // End Offers
+
+        // Start Fixed Image Background-1
+
+        section.fixedImageOne.relative.flex.align-items-center.justify-content-center
+            .overlay
+            .container.md-flex.align-items-center.justify-content-around
+                .text.col-md-9
+                    h2.title.my-0 Teaching Your Child Some Good Manners
+                    p.desc A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+                .CTA
+                    a(href="#" class="btn") Take a Course
+
+
+        // End Fixed Image Background
+
+        // Start Teachers
+
+        section.ourTeachers.text-center
+            .container
+                .heading-section
+                    h2.title Certified #[span Teachers]
+                    p.desc Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country
+                .teachers.md-flex.flex-wrap.row
+                    -
+                        var arr = [{
+                        name:'Bianca Wilson',
+                        job: 'TEACHER',
+                        info:'I am an ambitious workaholic, but apart from that, pretty simple person.',
+                        twitter: 'https://twitter.com/biancadesireej',
+                        facebook: 'https://www.facebook.com/BiancaMarieWilson',
+                        linkedin: 'https://uk.linkedin.com/in/bianca-wilson-444571185',
+                        instagram: 'https://www.instagram.com/biancamariewilson'
+                        },
+                        {
+                        name:'Mitch Parker',
+                        job: 'ENGLISH TEACHER',
+                        info:'I am an ambitious workaholic, but apart from that, pretty simple person.',
+                        twitter: 'https://twitter.com/biancadesireej',
+                        facebook: 'https://www.facebook.com/BiancaMarieWilson',
+                        linkedin: 'https://uk.linkedin.com/in/bianca-wilson-444571185',
+                        instagram: 'https://www.instagram.com/biancamariewilson'
+                        },
+                        {
+                        name:'Stella Smith',
+                        job: 'ART TEACHER',
+                        info:'I am an ambitious workaholic, but apart from that, pretty simple person.',
+                        twitter: 'https://twitter.com/biancadesireej',
+                        facebook: 'https://www.facebook.com/BiancaMarieWilson',
+                        linkedin: 'https://uk.linkedin.com/in/bianca-wilson-444571185',
+                        instagram: 'https://www.instagram.com/biancamariewilson'
+                        },
+                        {
+                        name:'Monshe Henderson',
+                        job: 'SCIENCE TEACHER',
+                        info:'I am an ambitious workaholic, but apart from that, pretty simple person.',
+                        twitter: 'https://twitter.com/biancadesireej',
+                        facebook: 'https://www.facebook.com/BiancaMarieWilson',
+                        linkedin: 'https://uk.linkedin.com/in/bianca-wilson-444571185',
+                        instagram: 'https://www.instagram.com/biancamariewilson'
+                        }]
+
+                    each teacher in arr
+                        .teacher.col.col-lg-3.col-md-6
+                            .img.relative
+                                img(src='img/'+ teacher.name +'.jpg' alt=teacher.name)
+                                .teacher-social.absolute
+                                    a.text-orange(href=teacher.twitter) #[i.fab.fa-twitter]
+                                    a.text-orange(href=teacher.facebook) #[i.fab.fa-facebook-f]
+                                    a.text-orange(href=teacher.linkedin) #[i.fab.fa-linkedin]
+                                    a.text-orange(href=teacher.instagram) #[i.fab.fa-instagram]
+                            .info
+                                h3.name.mb-0 #{teacher.name}
+                                h4.job.mt-0 #{teacher.job}
+                                p.desc.mt-0 #{teacher.info}
+
+        // End Teachers
+
+        //  ٍStart Courses
+
+        section.ourCourses
+            .container
+                .heading-section
+                    h2.title Our #[span Courses]
+                    p.desc Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country
+
+                .lessons.md-flex.flex-wrap.row
+                    -
+                        var arr = [{
+                            name:'Arts Lesson',
+                            time: '9:00am - 10am',
+                            info:'Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country'}, {
+                            name:'Language Lesson',
+                            time: '11:00am - 12am',
+                            info:'Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country'}, {
+                            name:'Music Lesson',
+                            time: '1:00am - 2am',
+                            info:'Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country'}, {
+                            name:'Sports Lesson',
+                            time: '3:00am - 4am',
+                            info:'Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country'}
+                            ]
+
+                    each lesson in arr
+                        .lesson.col.col-md-6
+                            .lg-flex
+                                div(style='background-image: url("img/' + lesson.name + '.jpg")').img.col-lg-5
+                                .info.col-lg-7
+                                    h3.name #{lesson.name}
+                                    p.time.mt-0 #[span Class time:] #{lesson.time}
+                                    p.desc.mt-0 #{lesson.info}
+
+
+        // End Courses
+
+        // Start Experience
+
+        section.experiences
+            .container
+                .heading-section
+                    h2.title 20 Years of #[span Experience]
+                    p.desc Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country
+
+                .experience.md-flex.text-center
+                    -
+                        var arr = [
+                            {name:'Certified Teachers', count: '18'},
+                            {name:'Successful Kids', count: '351'},
+                            {name:'Happy Parents', count: '564'},
+                            {name:'Awards Won', count: '300'}
+                            ]
+
+                    each exp in arr
+                        .exp.flex-equal
+                            strong #{exp.count}
+                            span #{exp.name}
+
+
+        // Start testimonials
+
+        section.testimonials
+            .container
+                .heading-section
+                    h2.title What Parents #[span Says About Us]
+                    p.desc Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country
+
+                .testimonial-slider.relative
+                    -
+                        var arr = [{
+                        name:'Bianca Wilson',
+                        job: 'Mother',
+                        text:'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.'}, {
+                        name:'Mitch Parker',
+                        job: 'Teacher',
+                        text:'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.', class:'active'}, {
+                        name:'Stella Smith',
+                        job: 'Doctor',
+                        text:'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.'}, {
+                        name:'Monshe Henderson',
+                        job: 'Mother',
+                        text:'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.'}
+                        ]
+
+                    each testimonial in arr
+                        .testimonial-block.md-flex.absolute(class=testimonial.class, class=(testimonial.name).replace(' ', "-"))
+                            .img.col-md-3.relative
+                                img(src='img/' + testimonial.name + '.jpg' alt=testimonial.name)
+                            .text.col-md-9
+                                p.testimonial #{testimonial.text}
+                                p.name.mt-0 #{testimonial.name}
+                                span.job.mt-0 #{testimonial.job}
+
+                    .slider-dots.absolute.middle-x
+                        -
+                            var arr= [
+                            {name:'Bianca Wilson'},
+                            {name:'Mitch Parker', class:'active'},
+                            {name:'Stella Smith'},
+                            {name:'Monshe Henderson'}
+                            ]
+                        each testimonial in arr
+                            span(class=testimonial.class, data-name=testimonial.name.replace(" ", "-"))
+        // End testimonials
+
+        // Start Form
+
+        section.form
+            .container
+                .form
+                    h2.mt-0 Request A Quote
+                    p Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+
+                    form(onsubmit='false').sm-flex.flex-wrap.align-items-start.justify-content-between
+                        input.col-sm-5(type='text' name='firstName' placeholder='First Name')
+                        input.col-sm-5(type='text' name='lastName' placeholder='Last Name')
+                        .select-opt.col-sm-5.relative
+                            span.arrow.fas.fa-chevron-down.absolute
+
+                            select(name='Course')
+                                -
+                                    var courseArr = [
+                                    {name:'Select Your Course',false:true},
+                                    {name:'Art Course'},
+                                    {name:'Music Course'},
+                                    {name:'Sports Course'},
+                                    {name:'Language Course'}
+                                    ]
+                                each course in courseArr
+                                    if course.false
+                                        option(value='0') #{course.name}
+                                    else
+                                        option(value=course.name) #{course.name}
+                        input.col-sm-5(type='tel' name='phone' placeholder='Phone')
+                        textarea.col-sm-5(name='message' placeholder='Message' rows='1')
+                        button.col-sm-5(type='submit' class='btn') Request A Quote
+
+
+
+        // End Form
+
+        // Start Pricing
+
+        section.ourPricing
+            .container
+                .heading-section
+                    h2.title Our #[span Pricing]
+                    p.desc Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country
+
+                .courses.md-flex.flex-wrap.text-center.row
+                    -
+                        var arr = [{
+                        type:'Basic',
+                        price: '$24.50',
+                        time: '1mos',
+                        img: 'slider-1',
+                        color: 'blue',
+                        info:'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.'}, {
+                        type:'Standard',
+                        price: '$34.50',
+                        time: '2mos',
+                        img: 'slider-2',
+                        color: 'orange',
+                        info:'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.'}, {
+                        type:'Premium',
+                        price: '$54.50',
+                        time: '3mos',
+                        img: 'fixedImage-1',
+                        color: 'green',
+                        info:'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.'}, {
+                        type:'Platinum',
+                        price: '$89.50',
+                        time: '5mos',
+                        img: 'Form',
+                        color: 'red',
+                        info:'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.'}
+                        ]
+
+                    each course in arr
+                        .course-container.col.col-xl-3.col-md-6
+                            .course
+                                h3.type #{course.type}
+                                h3
+                                    span.price #{course.price}
+                                    span.time / #{course.time}
+                                .img(style='background-image: url("img/' + course.img + '.jpg")')
+                                p.desc #{course.info}
+                                a.btn(class='bg-'+course.color) Take A Course
+
+        // End Pricing
+
+        // Start Blog
+
+        section.ourBlog
+            .container
+                .heading-section
+                    h2.title Recent #[span Blog]
+                    p.desc Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country
+
+                .md-flex.flex-wrap.row
+                    -
+                        var arr = [{
+                        name:'Skills To Develop Your Child Memory',
+                        img: 'writingSkill',
+                        price: '$24.50',
+                        day: '27',
+                        month: 'August',
+                        year: '2019',
+                        person: 'Visitor',
+                        comments: '19',
+                        info:'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.'}, {
+                        name:'Skills To Develop Your Child Memory',
+                        img: 'memorySkill',
+                        price: '$34.50',
+                        day: '6',
+                        month: 'October',
+                        year: '2019',
+                        person: 'User',
+                        comments: '1',
+                        info:'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.'}, {
+                        name:'Skills To Develop Your Child Memory',
+                        img: 'image-1',
+                        day: '19',
+                        month: 'December',
+                        year: '2019',
+                        person: 'Admin',
+                        comments: '5',
+                        info:'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.'}
+                        ]
+
+                    each blog in arr
+                        .blog-container.col.col-lg-4.col-md-6
+                            .blog
+                                .img.relative(style='background-image: url("img/' + blog.img + '.jpg")')
+                                    .time.absolute.text-center.bg-navy
+                                        span.day #{blog.day}
+                                        span.month #{blog.month}
+                                        span.year #{blog.year}
+                                .text
+                                    h3.name #{blog.name}
+                                    p.desc #{blog.info}
+
+                                    .flex.justify-content-between.align-items-center
+                                        a.btn Read More
+                                            span.fas.fa-arrow-right
+                                        .data
+                                            span.person.text-blue #{blog.person}
+                                            span.comments.fas.fa-comment-dots  #{blog.comments}
+
+
+        // End Blog
+
+        // Start separative Images
+
+        section.separativeImages
+
+            .box-model.fixed
+                .close.absolute.fas.fa-times.fa-2x
+
+                .arrow-container.relative.middle
+                    .arrow.absolute.arrow-right.fas.fa-caret-right.fa-3x
+                    .arrow.absolute.arrow-left.fas.fa-caret-left.fa-3x
+
+                .modelImg.absolute.middle(style='background-image: url("img/speakingSkill.jpg")')
+
+            .img-container.flex.flex-wrap
+                -
+                    var arr = [
+                    {name: 'Arts Lesson'},
+                    {name: 'memorySkill'},
+                    {name: 'speakingSkill'},
+                    {name: 'image-1'}
+                        ]
+                each img in arr
+                    .img.col-md-3(style='background-image: url("img/' + img.name + '.jpg")')
+
+
+        // End separative Images
+
+        include pug/footer
+
+        include pug/scripts

@@ -1,0 +1,49 @@
+@mixin maxSmall
+  @media (max-width: 575px)
+    @content
+@mixin minSmall
+  @media (min-width: 576px)
+    @content
+@mixin maxMedium
+  @media (max-width: 767px)
+    @content
+@mixin minMedium
+  @media (min-width: 768px)
+    @content
+@mixin maxLarge
+  @media (max-width: 991px)
+    @content
+@mixin minLarge
+  @media (min-width: 992px)
+    @content
+@mixin maxXlarge
+  @media (max-width: 1199px)
+    @content
+@mixin minXlarge
+  @media (min-width: 1200px)
+    @content
+
+@mixin btn($color, $bgColor, $padding, $width, $borderRedius, $border:0)
+  color: $color
+  background-color: $bgColor
+  padding: $padding
+  width: $width
+  border-radius: $borderRedius
+  border: $border solid $bgColor
+
+@mixin ie10-11
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+    @content
+
+@mixin ie-10($selector)
+  _:-ms-lang(x), #{$selector}
+    @content
+
+@mixin ie-10-2($selector)
+  html[data-useragent*='MSIE 10.0']
+    #{$selector}
+      @content
+//@mixin ie-10($selector, $map)
+//_:-ms-lang(x), #{$selector}
+//  @each $property, $value in ($map)
+//    #{$property}: $value

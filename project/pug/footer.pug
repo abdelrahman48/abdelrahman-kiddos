@@ -1,0 +1,93 @@
+// Start Footer
+
+footer
+    .container
+        .md-flex.flex-wrap.row
+            .info.col.col-lg-3.col-md-6
+                h3.title Have a Questions?
+                .location.flex.align-items-center
+                    span.icon.fas.fa-map-marker-alt
+                    p.col-10 203 Fake St. Mountain View, San Francisco, California, USA
+                .tel.flex.align-items-center
+                    span.icon.fas.fa-phone-alt
+                    p +2 392 3929 210
+
+                .email.flex.align-items-center
+                    span.icon.fas.fa-envelope
+                    p info@yourdomain.com
+
+            .blogs.col.col.col-lg-4.col-md-6
+                h3.title Recent Blog
+                    -
+                        var arr = [
+                        {
+                        title:'Even the all-powerful Pointing has no control about',
+                        img: 'writingSkill',
+                        date: 'Dec 25, 2018',
+                        person: 'Visitor',
+                        comments: '19'},
+                        {
+                        title:'Even the all-powerful Pointing has no control about',
+                        img: 'memorySkill',
+                        date: 'May 1, 2018',
+                        person: 'User',
+                        comments: '1'
+                        }
+                        ]
+
+                each blog in arr
+                    .blog.flex.align-items-start
+                        a.img.col.col-3(href=blog.img+'.html' , style='background-image: url("img/' + blog.img + '.jpg")')
+                        .text.col.col-9
+                            h4.blog-title.mt-0
+                                a(href=blog.img+'.html') #{blog.title}
+
+                            .data.lg-flex.flex-wrap
+                                .date.col-lg-7
+                                    span.flaticon-calendar
+                                    span #{blog.date}
+                                .person.col-lg-5.col-pad-0
+                                    span.flaticon-user
+                                    span #{blog.person}
+                                .comments.col-lg-5.col-pad-0
+                                    span.flaticon-comment
+                                    span #{blog.comments}
+
+
+            .links.col.col-lg-2.col-md-6
+                h3.title Links
+                ul
+                    -
+                        var arr = [
+                        {name:'Home'},
+                        {name:'About'},
+                        {name:'Services'},
+                        {name:'Deparments'},
+                        {name:'Contact'}
+                        ]
+                    each link in arr
+                        li
+                            span.flaticon-right
+                            a(href=link.name.toLowerCase()) #{link.name}
+
+
+            .subscribe.col.col-lg-3.col-md-6
+                h3.title Subscribe Us!
+                form(method='get')
+                    input.btn-1.text-center(type='email' name='email' placeholder='Enter email address')
+                    input.btn-2(type='submit' value='Subscribe')
+
+                h3.connect Connect With Us
+                .social
+                    -
+                        var arr = [
+                        {name:'twitter', class:'flaticon-twitter-logo-button'},
+                        {name:'facebook', class: 'flaticon-facebook-logo-button'},
+                        {name:'instagram', class: 'flaticon-instagram'}
+                        ]
+                    each social in arr
+                        a(class=social.class)
+        .copyright.text-center
+            p Copyright &copy;2019 All rights reserved | This template is made with #[span.flaticon-favorite-heart-button] by Colorlib
+
+// End Footer

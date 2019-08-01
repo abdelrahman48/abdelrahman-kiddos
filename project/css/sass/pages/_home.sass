@@ -1,0 +1,543 @@
+.window-size
+  top: 0
+  right: 0
+  color: red
+  font-size: 24px
+  z-index: 9
+// Start Feature
+.features
+  .feature
+    padding: 88px 20px 47px
+    @include maxLarge
+      padding-bottom: 100px
+    .title
+      color: #fff
+      font-size: 22px
+      font-weight: 500
+      margin-bottom: 0
+    .text
+      color: $whiteColor-8
+      margin-bottom: 0
+    .icon
+      width: 120px
+      height: 120px
+      border-radius: 50%
+      background-color: #fff
+      top: -90px
+      font-size: 55px
+      margin-top: 30px
+      display: inline-block
+      z-index: 20
+      [class*="flaticon"]
+        display: inline-block
+        margin-top: 28px
+        color: $blueColor
+
+// End Feature
+
+// Start Offers
+
+.whatWeOffer,
+.welcomeToKiddos
+  padding: 47px 0
+  > .title
+    color: $blackColor-8
+    font-size: 32px
+    font-weight: 500
+    line-height: 48px
+  .text
+    color: $blackColor-5
+    margin-bottom: 17px
+.whatWeOffer
+  padding-bottom: 65px
+  order: -1
+  > .text
+    padding-right: 40px
+  .services
+    margin-top: 50px
+    .service
+      @include maxLarge
+        &:not(:nth-last-of-type(-n+1))
+          margin-bottom: 21px
+      @include minLarge
+        &:not(:nth-last-of-type(-n+2))
+          margin-bottom: 21px
+      .icon
+        top: 5px
+        width: 80px
+        height: 80px
+        border-radius: 50%
+        background-color: $blueColor
+        display: inline-block
+        [class*="flaticon"]
+          color: #fff
+          font-size: 30px
+      .title
+        font-size: 20px
+        font-weight: 500
+        margin-bottom: 12px
+      .desc
+        display: inline-block
+        margin-left: 10px
+        margin-top: 0
+        max-width: 65%
+        @include maxLarge
+          margin-left: 15px
+        .text
+          margin-top: 0
+          margin-bottom: 30px
+
+.welcomeToKiddos
+  background-color: #FAFAFA
+  @include minMedium
+    padding-left: 40px
+    padding-right: 30px
+  @include maxMedium
+    margin: 0 -15px
+  @include maxLarge
+    padding-left: 15px
+    padding-right: 15px
+  @media (min-width: 768px) and (max-width: 1265px)
+    transform: translateX(15px)
+  .btn
+    @include btn(#fff, $orangeColor, 20px, 132px, 30px)
+
+// End Offers
+
+// Start Fixed Image Background
+
+@include ie-10-2('.fixedImageOne')
+  background-image: url("../img/fixedImage-1-ie10.jpg")
+.fixedImageOne
+  background: url("../img/fixedImage-1.jpg") no-repeat fixed center
+  background-size: cover
+  padding: 8em 0
+  @include maxSmall
+    background-position: 64% center
+  @include ie10-11
+    flex-direction: column
+  @include ie-10('.overlay')
+    display: none\9
+  .container
+    z-index: 1
+    .text
+      margin-right: 19px
+    .title
+      font-size: 36px
+      font-weight: 600
+      line-height: 54px
+      color: #fff
+    .desc
+      color: $whiteColor-8
+    .CTA
+      margin-top: 23px
+      .btn
+        @include btn(#fff, $orangeColor, 20px, 160px, 40px)
+// End Fixed Image Background
+
+// Start Teachers
+
+.ourTeachers
+  padding: 111px 0
+  .text
+    margin-bottom: 58px
+  .teacher
+    @include maxMedium
+      &:not(:nth-last-of-type(-n+1))
+        margin-bottom: 30px
+    @include maxLarge
+      &:not(:nth-last-of-type(-n+2))
+        margin-bottom: 30px
+    &:hover
+      cursor: pointer
+      .img
+        img
+          transform: scale(1.06)
+        .teacher-social
+          bottom: 0
+      .info
+        .name
+          color: $blueColor
+    .img
+      overflow: hidden
+      @media (max-width: 767px)
+        height: 300px
+      img
+        transition: $transition
+      .teacher-social
+        bottom: -30px
+        left: 0
+        width: 100%
+        background-color: #fff
+        padding-top: 20px
+        transition: $transition
+        a
+          margin: 0 10px
+          padding-bottom: 5px
+          font-size: 20px
+    .info
+      @media (min-width: 576px) and (max-width: 767px)
+        max-width: 60%
+        margin: auto
+      .name
+        font-size: 22px
+        font-weight: 500
+        margin-top: 30px
+        transition: $transition
+        @include minXlarge
+          font-size: 24px
+      .job
+        color: #B3B3B3
+        font-weight: lighter
+        letter-spacing: 1px
+        margin-top: 5px
+        margin-bottom: 18px
+      .desc
+        color: $blackColor-5
+
+// End Teachers
+
+// Start Courses
+
+.ourCourses
+  padding: 29px 0
+  .lesson
+    @include maxLarge
+      &:not(:nth-last-of-type(-n+1))
+        margin-bottom: 30px
+    @include minLarge
+      &:not(:nth-last-of-type(-n+2))
+        margin-bottom: 30px
+    .img
+      background: no-repeat center
+      background-size: cover
+      padding: 8em 0
+    .info
+      background-color: #FAFAFA
+      padding: 10px 26px
+      @include maxLarge
+        padding: 10px 15px
+      .name
+        color: $blueColor
+        font-size: 24px
+        margin-bottom: 12px
+      .time
+        color: #000
+        span
+          color: $orangeColor
+      .desc
+        color: $blackColor-5
+
+// End Courses
+
+// Start Experience
+
+.experiences
+  background: url("../img/fixedImage-2.jpg") no-repeat fixed top
+  background-size: cover
+  margin-top: 114px
+  padding-bottom: 138px
+  .heading-section
+    padding-top: 98px
+    span
+      color: #000
+  .experience
+    padding: 21px 0
+    @include minXlarge
+      padding: 21px 91px
+    .exp
+      @include maxMedium
+        &:not(:nth-last-of-type(-n+1))
+          margin-bottom: 60px
+      strong
+        color: $blueColor
+        display: block
+        font-size: 50px
+        font-weight: 500
+        margin-bottom: 20px
+      span
+        color: $blackColor-5
+
+// End Experience
+
+// Start testimonials
+
+.testimonials
+  padding: 105px 0 92px
+  background-color: $main-bg
+  .heading-section
+    @include minMedium
+      margin-bottom: 115px
+  .testimonial-slider
+    height: 300px
+    overflow: hidden
+    transition: $transition
+    @include maxMedium
+      height: 400px
+    @include maxSmall
+      height: 450px
+    .testimonial-block
+      opacity: .1
+      transition: $transition
+      width: 585px
+      @include minMedium
+        margin: 0 30px
+      @include maxXlarge
+        text-align: center
+      @include maxMedium
+        width: 100%
+      &.active
+        opacity: 1
+      .img
+        top: 15px
+        @include maxMedium
+          top: 10px
+          margin-bottom: 25px
+        @include minMedium
+          text-align: right
+          margin-right: 25px
+        img
+          width: 120px
+          height: 120px
+          border-radius: 50%
+      .text
+        @include minMedium
+          max-width: 400px
+          text-align: left
+        @include maxMedium
+          max-width: 70%
+          margin: auto
+        @include maxSmall
+          max-width: 100%
+        .testimonial
+          color: $blackColor-8
+          font-size: 18px
+          line-height: 32.4px
+        .name
+          margin-bottom: 8px
+          font-size: 18px
+        .job
+          color: $blueColor
+          font-size: 14px
+          font-weight: 600
+    .slider-dots
+      bottom: 25px
+      span
+        @extend %dots
+        background-color: rgba(0, 0, 0, .2)
+
+// End testimonials
+
+// Start Form
+
+section.form
+  background: url("../img/Form.jpg") fixed center
+  height: 528px
+  overflow: hidden
+  @include maxSmall
+    height: auto
+  .form
+    background-color: $blueColor
+    height: 528px
+    padding: 57px 42px 16px
+    margin-right: -15px
+    margin-left: -15px
+    @include maxSmall
+      height: auto
+      padding: 57px 15px 16px
+    @include minMedium
+      max-width: 615px
+      margin-left: auto
+    h2
+      font-size: 40px
+      font-weight: 600
+      color: #fff
+    p
+      color: $whiteColor-9
+    form
+      margin-top: 61px
+      input,
+      select,
+      textarea,
+      button
+        color: $whiteColor-9
+        padding-bottom: 21px
+        margin-bottom: 33px
+        @include maxSmall
+          display: block
+          width: 100%
+      input,
+      select,
+      textarea
+        border-bottom: 1px solid rgba(255,255,255,0.2)
+      select
+        width: 100%
+        option
+          background-color: $blueColor
+      .select-opt
+        .arrow
+          right: 5px
+          top: 5px
+          color: $whiteColor-9
+      ::placeholder
+        color: $whiteColor-9
+      .btn
+        @include btn($whiteColor-9, $orangeColor, 20px, null, 30px)
+
+// End Form
+
+// Start Pricing
+.ourPricing
+  padding: 110px 0 110px
+  .course-container
+    @include maxMedium
+      &:not(:nth-last-of-type(-n+1))
+        margin-bottom: 40px
+    @include maxXlarge
+      &:not(:nth-last-of-type(-n+2))
+        margin-bottom: 40px
+    .course
+      background-color: #FAFAFA
+      padding: 30px 0
+      .type
+        font-size: 24px
+        font-weight: 500
+        margin-bottom: 29px
+      .price
+        color: $blueColor
+        font-size: 28px
+        font-weight: 900
+        margin: 0 5px
+      .time
+        color: $blackColor-5
+        font-size: 12px
+        font-weight: 500
+      .img
+        height: 150px
+        background-size: cover
+        background-position: top center
+        margin-top: 28px
+      .desc
+        color: $blackColor-5
+        margin: 21px 0 23px
+        padding: 0 30px
+      .btn
+        @include btn(#fff,null,20px, 161px, 30px, 1px)
+
+// End Pricing
+
+// Start Blog
+.ourBlog
+  background-color: $main-bg
+  padding: 105px 0 142px
+  .blog-container
+    @include maxLarge
+      &:not(:last-of-type)
+        margin-bottom: 40px
+    .blog
+      background-color: #fff
+      .img
+        height: 275px
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center
+        .time
+          bottom: 0
+          padding: 8px 11px
+          span
+            display: block
+            color: #fff
+          .day
+            line-height: 36px
+            font-size: 20px
+            font-weight: 700
+          .month,
+          .year
+            font-size: 13px
+            line-height: 23.4px
+      .text
+        padding: 0 24px 24px
+        @include maxLarge
+          padding: 0 15px 24px
+        .name
+          font-size: 20px
+          font-weight: 400
+          line-height: 30px
+          margin-top: 23px
+          &:hover
+            color: $blueColor
+        .desc
+          margin-bottom: 24px
+          color: $blackColor-5
+        .btn
+          @include btn(#fff, $orangeColor, 10px, 124px, 40px)
+          span
+            font-size: 10px
+            margin-left: 10px
+            display: inline-block
+        .data
+            .person
+              margin-right: 12px
+              margin-top: 10px
+            .comments
+              color: #B3B3B3
+
+// End Blog
+
+// Start separative Images
+body.stop-scrolling
+  height: 100%
+  overflow: hidden
+  margin-right: 17px
+.separativeImages
+  .img
+    height: 350px
+    width: 100%
+    background: no-repeat center
+    background-size: cover
+    &:hover
+      cursor: pointer
+  .box-model
+    z-index: -1
+    opacity: 0
+    transition: $transition
+    background-color: $blackColor-8
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    &.active
+      display: block
+      opacity: 1
+      z-index: 999
+    &.active body
+      overflow: hidden
+    .close
+      right: 15px
+      top: 15px
+      color: rgba(255, 255, 255, .5)
+      cursor: pointer
+      z-index: 1
+    .arrow-container
+      z-index: 1
+      color: #666
+      cursor: pointer
+      .arrow-right
+        right: 15px
+      .arrow-left
+        left: 15px
+    .close, .arrow-left, .arrow-right
+      transition: $transition
+      &:hover
+        color: #fff
+    .modelImg
+      height: 600px
+      width: 800px
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: center
+      @include maxSmall
+        height: 400px
+        width: 500px
+
+// End separative Images

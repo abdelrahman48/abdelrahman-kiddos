@@ -1,0 +1,99 @@
+footer
+  background-color: #232323
+  padding: 66px 0 85px
+  h3
+    color: #fff
+    font-size: 22px
+    font-weight: 500
+  p
+    font-size: 14px
+    color: $whiteColor-7
+  .info, .blogs, .links
+    @include maxMedium
+      margin-bottom: 50px
+  .info, .blogs
+    @include minMedium
+      margin-bottom: 50px
+  .info
+    .title
+      margin-bottom: 31px
+    .icon
+      color: #fff
+      margin-right: 29px
+      font-size: 18px
+    p
+      line-height: 21px
+  .blogs
+    .title
+      margin-bottom: 45px
+    .blog
+      margin-bottom: 17px
+      .img
+        background-size: cover
+        background-position: center
+        height: 80px
+        display: inline-block
+      .blog-title
+        font-size: 16px
+        font-weight: 400
+        line-height: 24px
+        margin-bottom: 14px
+        a
+          color: rgba(255, 255, 255, .9)
+          transition: $transition
+          &:hover
+            color: $blueColor
+      .data
+        .date, .person, .comments
+          margin-bottom: 12px
+          @include maxLarge
+            display: inline-block
+            padding-right: 10px
+          [class^='flaticon']
+            margin-right: 5px
+          span
+            font-size: 12px
+            color: #808080
+  .links
+    .title
+      margin-bottom: 42px
+    li
+      line-height: 25.2px
+      [class^='flaticon']
+        color: #fff
+        font-size: 8px
+      a
+        color: $whiteColor-7
+        font-size: 14px
+        transition: $transition
+        margin-left: 9px
+        &:hover
+          color: #fff
+  .subscribe
+    .title
+      margin-bottom: 45px
+    form
+      margin-bottom: 43px
+      input
+        display: inline-block
+        font-size: 16px
+        margin-bottom: 10px
+        width: 100%
+      .btn-1
+        @include btn($whiteColor-7, #3C3C3C, 16px, null, 5px)
+      ::placeholder
+        color: $whiteColor-7
+      .btn-2
+        @include btn(#fff, $navyColor, 16px, null, 5px)
+        transition: $transition
+        cursor: pointer
+        &:hover
+          background-color: $blueColor
+    .social
+      [class^='flaticon']
+        color: #fff
+        font-size: 35px
+        margin-right: 24px
+        cursor: pointer
+  .copyright
+    margin-top: 69px
