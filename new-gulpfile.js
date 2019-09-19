@@ -70,21 +70,23 @@ function font() {
         .pipe(connect.reload())
 }
 
-function watcher() {
+function watcher(done) {
     watch('src/**/*.pug', html);
     watch(['src/**/*.sass', 'src/**/*.css'], css);
     watch('src/**/*.js', js);
     watch('src/img/**', img);
     watch('src/webfonts/**', font);
     watch('src/vendor/**', vendor);
+    done();
 }
 
-function LiveReload() {
+function LiveReload(done) {
     connect.server({
         root: './build/',
         port: 5000,
         livereload: true
     });
+    done();
 }
 
 exports.default = parallel(LiveReload, watcher);
