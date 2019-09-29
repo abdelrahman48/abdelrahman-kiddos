@@ -1,5 +1,5 @@
 /*
-  Cache-Control: public, s-max-age=604800
+  cache-control: max-age= 1 week
 /img/*
   Cache-Control: public, s-max-age=604800
 /css/*.css
