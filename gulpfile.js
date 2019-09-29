@@ -74,6 +74,12 @@ function img() {
         .pipe(connect.reload())
 }
 
+function favicon() {
+    return src('build/img/favicon.ico')
+        .pipe(dest('build/'))
+        .pipe(connect.reload())
+}
+
 function vendor() {
     return src('src/vendor/**')
         .pipe(dest('build/vendor/'))
@@ -91,6 +97,7 @@ function watcher(done) {
     watch('src/**/*.sass', css);
     watch('src/**/*.js', js);
     watch('src/img/**', img);
+    watch('build/img/favicon.ico', favicon);
     watch('src/webfonts/**', font);
     watch('src/vendor/**', vendor);
     done();
@@ -110,6 +117,7 @@ exports.html = html;
 exports.css = series(css, allcss);
 exports.js = js;
 exports.img = img;
+exports.favicon = favicon;
 exports.font = font;
 exports.vendor = vendor;
-exports.all = series(html, js, css, img, font, vendor);
+exports.all = series(html, js, css, img, favicon, font, vendor);
