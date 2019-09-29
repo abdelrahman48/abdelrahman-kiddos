@@ -1,2 +1,2 @@
 /*
-  cache-control: max-age=week
+  cache-control: max-age= 1 week
