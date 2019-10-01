@@ -307,7 +307,7 @@ html(lang="en")
                     each testimonial in arr
                         .testimonial-block.md-flex.absolute(class=testimonial.class, class=(testimonial.name).replace(' ', "-"))
                             .img.col-md-3.relative
-                                img(src='img/' + testimonial.name + '.jpg' alt=testimonial.name)
+                                img(src='img/' + testimonial.name.split(/[ ,]+/).join('-') + '-small.jpg' alt=testimonial.name)
                             .text.col-md-9
                                 p.testimonial #{testimonial.text}
                                 p.name.mt-0 #{testimonial.name}
