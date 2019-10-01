@@ -206,7 +206,7 @@ html(lang="en")
                     each teacher in arr
                         .teacher.col.col-lg-3.col-md-6
                             .img.relative
-                                img(src='img/'+ teacher.name +'.jpg' alt=teacher.name)
+                                img(srcset="img/" + teacher.name.split(/[ ,]+/).join('-') + "-small.jpg 280w, img/" + teacher.name.split(/[ ,]+/).join('-') + ".jpg 850w" sizes="(max-width: 991px) 850px, 280px" src='img/' + teacher.name.split(/[ ,]+/).join('-') + '.jpg' alt=teacher.name)
                                 .teacher-social.absolute
                                     a.text-orange(href=teacher.twitter) #[i.fab.fa-twitter]
                                     a.text-orange(href=teacher.facebook) #[i.fab.fa-facebook-f]
