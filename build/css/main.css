@@ -638,6 +638,11 @@
   background-color: #1FAAF2;
 }
 
+.bg.lazyload {
+  background-image: none !important;
+  background-color: #F1F1FA;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

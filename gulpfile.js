@@ -12,7 +12,7 @@ var cssnano = require('gulp-cssnano');
 var plugins = [
     uncss({
         html: ['build/index.html'],
-        ignore : [/\.active/],
+        ignore : [/\.active/, /\.lazyload/],
         timeout: 1000
     })
 ];

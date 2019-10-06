@@ -37,7 +37,7 @@ footer
 
                 each blog in arr
                     .blog.flex.align-items-start
-                        a.img.col.col-3(href=blog.img+'.html' , style='background-image: url("img/' + blog.img + '.jpg")')
+                        a.img.col.col-3(class="bg lazyload" href=blog.img + '.html' style='background-image: url("img/' + blog.img + '.jpg")')
                         .text.col.col-9
                             h4.blog-title.mt-0
                                 a(href=blog.img+'.html') #{blog.title}

@@ -145,7 +145,7 @@ html(lang="en")
 
         // Start Fixed Image Background-1
 
-        section.fixedImageOne.relative.flex.align-items-center.justify-content-center
+        section.fixedImageOne.bg.lazyload.relative.flex.align-items-center.justify-content-center
             .overlay
             .container.md-flex.align-items-center.justify-content-around
                 .text.col-md-9
@@ -168,6 +168,7 @@ html(lang="en")
                     -
                         var arr = [{
                         name:'Bianca Wilson',
+                        imgName:'Bianca-Wilson',
                         job: 'TEACHER',
                         info:'I am an ambitious workaholic, but apart from that, pretty simple person.',
                         twitter: 'https://twitter.com/biancadesireej',
@@ -177,6 +178,7 @@ html(lang="en")
                         },
                         {
                         name:'Mitch Parker',
+                        imgName:'Mitch-Parker',
                         job: 'ENGLISH TEACHER',
                         info:'I am an ambitious workaholic, but apart from that, pretty simple person.',
                         twitter: 'https://twitter.com/biancadesireej',
@@ -186,6 +188,7 @@ html(lang="en")
                         },
                         {
                         name:'Stella Smith',
+                        imgName:'Stella-Smith',
                         job: 'ART TEACHER',
                         info:'I am an ambitious workaholic, but apart from that, pretty simple person.',
                         twitter: 'https://twitter.com/biancadesireej',
@@ -195,6 +198,7 @@ html(lang="en")
                         },
                         {
                         name:'Monshe Henderson',
+                        imgName:'Monshe-Henderson',
                         job: 'SCIENCE TEACHER',
                         info:'I am an ambitious workaholic, but apart from that, pretty simple person.',
                         twitter: 'https://twitter.com/biancadesireej',
@@ -206,7 +210,7 @@ html(lang="en")
                     each teacher in arr
                         .teacher.col.col-lg-3.col-md-6
                             .img.relative
-                                img(srcset="img/" + teacher.name.split(/[ ,]+/).join('-') + "-small.jpg 280w, img/" + teacher.name.split(/[ ,]+/).join('-') + ".jpg 850w" sizes="(max-width: 991px) 850px, 280px" src='img/' + teacher.name.split(/[ ,]+/).join('-') + '.jpg' alt=teacher.name)
+                                img(class="lazyload" data-srcset="img/" + teacher.imgName + "-small.jpg 280w, img/" + teacher.imgName + ".jpg 850w" sizes="(max-width: 991px) 850px, 280px" data-src='img/' + teacher.imgName + '.jpg' alt=teacher.name)
                                 .teacher-social.absolute
                                     a.text-orange(href=teacher.twitter) #[i.fab.fa-twitter]
                                     a.text-orange(href=teacher.facebook) #[i.fab.fa-facebook-f]
@@ -247,7 +251,7 @@ html(lang="en")
                     each lesson in arr
                         .lesson.col.col-md-6
                             .lg-flex
-                                div(style='background-image: url("img/' + lesson.name + '.jpg")').img.col-lg-5
+                                div(class="bg lazyload" style='background-image: url("img/' + lesson.name + '.jpg")').img.col-lg-5
                                 .info.col-lg-7
                                     h3.name #{lesson.name}
                                     p.time.mt-0 #[span Class time:] #{lesson.time}
@@ -258,7 +262,7 @@ html(lang="en")
 
         // Start Experience
 
-        section.experiences
+        section.experiences.bg.lazyload
             .container
                 .heading-section
                     h2.title 20 Years of #[span Experience]
@@ -291,15 +295,19 @@ html(lang="en")
                     -
                         var arr = [{
                         name:'Bianca Wilson',
+                        imgName:'Bianca-Wilson',
                         job: 'Mother',
                         text:'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.'}, {
                         name:'Mitch Parker',
+                        imgName:'Mitch-Parker',
                         job: 'Teacher',
                         text:'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.', class:'active'}, {
                         name:'Stella Smith',
+                        imgName:'Stella-Smith',
                         job: 'Doctor',
                         text:'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.'}, {
                         name:'Monshe Henderson',
+                        imgName:'Monshe-Henderson',
                         job: 'Mother',
                         text:'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.'}
                         ]
@@ -307,7 +315,7 @@ html(lang="en")
                     each testimonial in arr
                         .testimonial-block.md-flex.absolute(class=testimonial.class, class=(testimonial.name).replace(' ', "-"))
                             .img.col-md-3.relative
-                                img(src='img/' + testimonial.name.split(/[ ,]+/).join('-') + '-small.jpg' alt=testimonial.name)
+                                img(class="lazyload" data-src='img/' + testimonial.imgName + '-small.jpg' alt=testimonial.name)
                             .text.col-md-9
                                 p.testimonial #{testimonial.text}
                                 p.name.mt-0 #{testimonial.name}
@@ -327,7 +335,7 @@ html(lang="en")
 
         // Start Form
 
-        section.form
+        section.form.bg.lazyload
             .container
                 .form
                     h2.mt-0 Request A Quote
@@ -405,7 +413,7 @@ html(lang="en")
                                 h3
                                     span.price #{course.price}
                                     span.time / #{course.time}
-                                .img(style='background-image: url("img/' + course.img + '.jpg")')
+                                .img(class="bg lazyload" style='background-image: url("img/' + course.img + '.jpg")')
                                 p.desc #{course.info}
                                 a.btn(class='bg-'+course.color) Take A Course
 
@@ -453,7 +461,7 @@ html(lang="en")
                     each blog in arr
                         .blog-container.col.col-lg-4.col-md-6
                             .blog
-                                .img.relative(style='background-image: url("img/' + blog.img + '.jpg")')
+                                .img.relative(class="bg lazyload" style='background-image: url("img/' + blog.img + '.jpg")')
                                     .time.absolute.text-center.bg-navy
                                         span.day #{blog.day}
                                         span.month #{blog.month}
@@ -483,7 +491,7 @@ html(lang="en")
                     .arrow.absolute.arrow-right.fas.fa-caret-right.fa-3x
                     .arrow.absolute.arrow-left.fas.fa-caret-left.fa-3x
 
-                .modelImg.absolute.middle(style='background-image: url("img/speakingSkill.jpg")')
+                .modelImg.absolute.middle
 
             .img-container.flex.flex-wrap
                 -
@@ -494,7 +502,7 @@ html(lang="en")
                     {name: 'image-1'}
                         ]
                 each img in arr
-                    .img.col-md-3(style='background-image: url("img/' + img.name + '.jpg")')
+                    .img.col-md-3(class="bg lazyload" style='background-image: url("img/' + img.name + '.jpg")')
 
 
         // End separative Images

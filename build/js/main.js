@@ -295,6 +295,39 @@ if (!Array.prototype.find) {
 // };
 // End show window size on IE
 
+// lazy load images
+function lazyLoad() {
+    var lazyImages = document.querySelectorAll('.lazyload');
+    var inAdvance = 300;
+
+    setTimeout(function () {
+        lazyImages.forEach(function (image) {
+            if(image.classList.contains('lazyload')) {
+                if (image.offsetTop < window.innerHeight + window.pageYOffset + inAdvance) {
+                    if (image.dataset.src) {
+                        image.src = image.dataset.src;
+                    }
+                    if (image.dataset.srcset) {
+                        image.srcset = image.dataset.srcset;
+                    }
+                    image.classList.remove('lazyload');
+                    image.classList.add('loaded');
+                }
+            }
+        });
+        if (lazyImages.length === 0) {
+            window.removeEventListener('scroll', lazyLoad);
+            window.removeEventListener('resize', lazyLoad);
+            window.removeEventListener("orientationChange", lazyLoad);
+        }
+    }, 20);
+}
+lazyLoad();
+window.addEventListener('scroll', lazyLoad);
+window.addEventListener('resize', lazyLoad);
+window.addEventListener("orientationChange", lazyLoad);
+
+
 // Start prevent default when click on links
 var doc = document.documentElement;
 doc.setAttribute('data-useragent', navigator.userAgent);
