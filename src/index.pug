@@ -210,7 +210,7 @@ html(lang="en")
                     each teacher in arr
                         .teacher.col.col-lg-3.col-md-6
                             .img.relative
-                                img(src='' class="lazyload" data-srcset="img/" + teacher.imgName + "-small.jpg 280w, img/" + teacher.imgName + ".jpg 850w" sizes="(max-width: 991px) 850px, 280px" data-src='img/' + teacher.imgName + '.jpg' alt=teacher.name)
+                                img(src='' class="lazyload" data-srcset="img/" + teacher.imgName + "-small.jpg 280w, img/" + teacher.imgName + ".jpg 850w" sizes="(max-width: 991px) 850px, 280px" srcset data-src='img/' + teacher.imgName + '.jpg' alt=teacher.name)
                                 .teacher-social.absolute
                                     a.text-orange(href=teacher.twitter) #[i.fab.fa-twitter]
                                     a.text-orange(href=teacher.facebook) #[i.fab.fa-facebook-f]
@@ -413,7 +413,7 @@ html(lang="en")
                                 h3
                                     span.price #{course.price}
                                     span.time / #{course.time}
-                                .img(src='' class="bg lazyload" style='background-image: url("img/' + course.img + '.jpg")')
+                                .img(class="bg lazyload" style='background-image: url("img/' + course.img + '.jpg")')
                                 p.desc #{course.info}
                                 a.btn(class='bg-'+course.color) Take A Course
 
