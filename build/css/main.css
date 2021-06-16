@@ -643,6 +643,10 @@
   background-color: #F1F1FA;
 }
 
+.heading-hidden {
+  display: none;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
