@@ -210,7 +210,7 @@ html(lang="en")
                     each teacher in arr
                         .teacher.col.col-lg-3.col-md-6
                             .img.relative
-                                img(src='' class="lazyload" data-srcset="img/" + teacher.imgName + "-small.jpg 280w, img/" + teacher.imgName + ".jpg 850w" sizes="(max-width: 991px) 850px, 280px" srcset data-src='img/' + teacher.imgName + '.jpg' alt=teacher.name)
+                                img(src='img/placeholder-img.jpg' class="lazyload" data-srcset="img/" + teacher.imgName + "-small.jpg 280w, img/" + teacher.imgName + ".jpg 850w" sizes="(max-width: 991px) 850px, 280px" srcset="img/" + teacher.imgName + "-small.jpg" data-src='img/' + teacher.imgName + '.jpg' alt=teacher.name)
                                 .teacher-social.absolute
                                     a.text-orange(href=teacher.twitter) #[i.fab.fa-twitter]
                                     a.text-orange(href=teacher.facebook) #[i.fab.fa-facebook-f]
@@ -315,7 +315,7 @@ html(lang="en")
                     each testimonial in arr
                         .testimonial-block.md-flex.absolute(class=testimonial.class, class=(testimonial.name).replace(' ', "-"))
                             .img.col-md-3.relative
-                                img(src='' class="lazyload" data-src='img/' + testimonial.imgName + '-small.jpg' alt=testimonial.name)
+                                img(src='img/placeholder-img.jpg' class="lazyload" data-src='img/' + testimonial.imgName + '-small.jpg' alt=testimonial.name)
                             .text.col-md-9
                                 p.testimonial #{testimonial.text}
                                 p.name.mt-0 #{testimonial.name}
