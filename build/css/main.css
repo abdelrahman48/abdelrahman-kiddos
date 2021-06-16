@@ -979,7 +979,6 @@ nav .navigation ul li a:hover {
   padding: 20px;
   width: 132px;
   border-radius: 30px;
-  border: 0 solid #FDA638;
 }
 
 .header-slider .slider-container .image {
@@ -1131,7 +1130,6 @@ footer .subscribe form .btn-1 {
   background-color: #3C3C3C;
   padding: 16px;
   border-radius: 5px;
-  border: 0 solid #3C3C3C;
 }
 
 footer .subscribe form ::-webkit-input-placeholder {
@@ -1159,7 +1157,6 @@ footer .subscribe form .btn-2 {
   background-color: #5C50C6;
   padding: 16px;
   border-radius: 5px;
-  border: 0 solid #5C50C6;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   cursor: pointer;
@@ -1366,7 +1363,6 @@ select {
   padding: 20px;
   width: 132px;
   border-radius: 30px;
-  border: 0 solid #FDA638;
 }
 
 html[data-useragent*='MSIE 10.0'] .fixedImageOne {
@@ -1427,7 +1423,6 @@ html[data-useragent*='MSIE 10.0'] .fixedImageOne {
   padding: 20px;
   width: 160px;
   border-radius: 40px;
-  border: 0 solid #FDA638;
 }
 
 .ourTeachers {
@@ -1865,7 +1860,6 @@ section.form .form form .btn {
   background-color: #FDA638;
   padding: 20px;
   border-radius: 30px;
-  border: 0 solid #FDA638;
 }
 
 .ourPricing {
@@ -1926,7 +1920,6 @@ section.form .form form .btn {
   padding: 20px;
   width: 161px;
   border-radius: 30px;
-  border: 1px solid;
 }
 
 .ourBlog {
@@ -2005,7 +1998,6 @@ section.form .form form .btn {
   padding: 10px;
   width: 124px;
   border-radius: 40px;
-  border: 0 solid #FDA638;
 }
 
 .ourBlog .blog-container .blog .text .btn span {

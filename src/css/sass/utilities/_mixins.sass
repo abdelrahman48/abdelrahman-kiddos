@@ -23,13 +23,12 @@
   @media (min-width: 1200px)
     @content
 
-@mixin btn($color, $bgColor, $padding, $width, $borderRedius, $border:0)
+@mixin btn($color, $bgColor, $padding, $width, $borderRedius)
   color: $color
   background-color: $bgColor
   padding: $padding
   width: $width
   border-radius: $borderRedius
-  border: $border solid $bgColor
 
 @mixin ie10-11
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)

@@ -94,7 +94,7 @@ function font() {
 
 function watcher(done) {
     watch('src/**/*.pug', html);
-    watch('src/**/*.sass', css);
+    watch('src/**/*.sass', series(css, allcss));
     watch('src/**/*.js', js);
     watch('src/img/**', img);
     watch('build/img/favicon.ico', favicon);
